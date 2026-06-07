@@ -55,10 +55,23 @@ export function Contact() {
                 </button>
 
                 <div className="flex items-center gap-4 p-4 rounded-2xl border border-border bg-card/60">
-                  <span className="size-10 grid place-items-center rounded-xl bg-cyan/15 text-cyan"><Phone className="size-5" /></span>
+                  <span className="size-10 grid place-items-center rounded-xl bg-cyan/15 text-cyan">
+                    <Linkedin className="size-5" />
+                  </span>
+
                   <span>
-                    <span className="block text-xs text-muted-foreground">Phone</span>
-                    <span className="block font-mono text-sm">+91 7032633613</span>
+                    <span className="block text-xs text-muted-foreground">
+                      LinkedIn
+                    </span>
+
+                    <a
+                      href="https://www.linkedin.com/in/vasundara-harika-varanasi/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block font-mono text-sm hover:text-cyan transition-colors"
+                    >
+                      vasundara-harika-varanasi
+                    </a>
                   </span>
                 </div>
 

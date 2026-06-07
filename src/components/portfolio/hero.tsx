@@ -78,7 +78,7 @@ export function Hero() {
               <a href="#contact">Get In Touch</a>
             </Button>
             <a
-              href={resume}
+              href="/resume.pdf"
               download="Vasundara_Harika_Resume.pdf"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >

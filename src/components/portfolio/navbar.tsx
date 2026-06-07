@@ -4,7 +4,6 @@ import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./theme-provider";
 import { cn } from "@/lib/utils";
-import resume from "../../assets/resume.pdf";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -18,12 +17,15 @@ const links = [
 
 export function Navbar() {
   const { theme, toggle } = useTheme();
+
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
@@ -39,7 +41,7 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between">
-        
+
         {/* Logo */}
         <Link
           to="/"
@@ -64,9 +66,9 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Right Side Buttons */}
+        {/* Right Side */}
         <div className="flex items-center gap-2">
-          
+
           {/* Resume Button */}
           <Button
             variant="outline"
@@ -75,7 +77,7 @@ export function Navbar() {
             asChild
           >
             <a
-              href={resume}
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -97,7 +99,7 @@ export function Navbar() {
             )}
           </button>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen((o) => !o)}
             className="lg:hidden p-2"
@@ -116,6 +118,7 @@ export function Navbar() {
       {open && (
         <div className="lg:hidden glass border-t border-border/60 mt-3">
           <ul className="px-6 py-5 flex flex-col gap-4">
+
             {links.map((l) => (
               <li key={l.href}>
                 <a
@@ -127,6 +130,20 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+
+            {/* Mobile Resume Button */}
+            <li>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 py-3 text-cyan font-medium"
+              >
+                <Download className="size-5" />
+                Resume
+              </a>
+            </li>
+
           </ul>
         </div>
       )}
