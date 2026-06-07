@@ -74,25 +74,62 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
+  meta: [
+    { charSet: "utf-8" },
+
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+
+    {
+      title: "Vasundara Harika Portfolio",
+    },
+
+    {
+      name: "description",
+      content: "Full Stack Developer Portfolio",
+    },
+
+    {
+      name: "author",
+      content: "Vasundara Harika",
+    },
+
+    {
+      property: "og:title",
+      content: "Vasundara Harika Portfolio",
+    },
+
+    {
+      property: "og:description",
+      content: "Full Stack Developer Portfolio",
+    },
+
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+  ],
+
+  links: [
+    {
+      rel: "stylesheet",
+      href: appCss,
+    },
+
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon.png",
+    },
+  ],
+}),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
