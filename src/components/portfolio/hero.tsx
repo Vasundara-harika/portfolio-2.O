@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 import { ParticleField } from "./particle-field";
 import graduation from "@/assets/graduation.png";
 import resume from "@/assets/resume.pdf";
+import AnimatedBlob from "@/components/portfolio/AnimatedBlob";
 
 const ROLES = ["Full Stack Developer", "MERN Stack Engineer", "React Native Developer", "Open Source Contributor"];
 
@@ -41,8 +42,10 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-8 animate-[fade-in_0.8s_ease-out]">
+          
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-violet/40 mb-6">
             <span className="size-2 rounded-full bg-success animate-pulse" />
+            
             <span className="text-xs font-mono text-muted-foreground">Available for Projects</span>
           </div>
 
